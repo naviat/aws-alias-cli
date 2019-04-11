@@ -141,3 +141,9 @@ list-all-ec2 = !f() {
         aws ec2 describe-instances --region $region | jq '.Reservations[] | ( .Instances[] | {state: .State.Name, name: .KeyName, type: .InstanceType, key: .KeyName})'
     done
   }; f
+list-stat-ec2 = !f() {
+    for region in $(aws ec2 describe-regions --region us-east-1 --output text | cut -f3); do
+        printf "\nListing Instances in region:'$region'..."
+        aws ec2 describe-instances --region $region
+    done
+  }; f
