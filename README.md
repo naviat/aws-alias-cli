@@ -22,9 +22,9 @@ Note that running the commands below **will** delete any existing alias
 file you may have had:
 
 ```
-$ git clone https://github.com/awslabs/awscli-aliases.git
+$ git clone https://github.com/naviat/aws-alias-cli.git
 $ mkdir -p ~/.aws/cli
-$ cp awscli-aliases/alias ~/.aws/cli/alias
+$ cp aws-alias-cli/alias ~/.aws/cli/alias
 ```
 
 To test that the aliases now work, run the following alias:
